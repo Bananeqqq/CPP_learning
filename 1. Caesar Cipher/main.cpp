@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<limits>
 
 std::string shiftFunc(std::string word, int key);
 std::string deshiftFunc(std::string word, int key);
@@ -24,9 +25,16 @@ int main(){
     do {
         std::cout << "\nChoose shifting method: \n1 - number key\n2 - word key\nYour choice: ";
         std::cin >> choice;
+        correct_choice = true;
+
+
+        if (!std::cin){
+            std::cin.clear(); 
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
 
         if (choice != 1 && choice != 2){
-            std::cout << "\nWrong choice!!" << std::endl;
+            std::cout << "\nWrong choice! Enter 1 or 2!" << std::endl;
             correct_choice = false;
         }
     }while (!correct_choice);
