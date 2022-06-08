@@ -44,7 +44,7 @@ int main(){
         }
 
         for (int i = 0; i < num_of_symbols; ++i){ //symbols after the spaces
-            std::cout << i+1;
+            std::cout << symbol;
         }
 
        std::cout << "\n";
