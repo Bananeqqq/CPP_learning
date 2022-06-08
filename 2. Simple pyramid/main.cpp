@@ -71,6 +71,52 @@ int main(){
        num_of_symbols -= 2;
     }
 
+    std::cout << "\n";
+
+
+    num_of_symbols = 1;
+    spaces = height - 1;
+
+    for (int h = 0; h < height; ++h){
+
+        for (int j = spaces; j >= 0; --j){ //spaces in front of the first symbol
+            std::cout << " ";
+        }
+
+        for (int i = 0; i < num_of_symbols; ++i){ //symbols after the spaces
+            if ( (i==0) || (i == (num_of_symbols-1) ) || (h==height-1) ){
+                std::cout << symbol;    
+            }else std::cout << " ";
+            
+        }
+
+       std::cout << "\n";
+       spaces = (spaces == 0) ? 0 : --spaces;
+       num_of_symbols += 2;
+    }
+
+
+    std::cout << "\n";
+    num_of_symbols = 2*height-1;
+    spaces = 0;
+    for (int h = 0; h < height; ++h){
+
+        for (int j = spaces; j >= 0; --j){ //spaces in front of the first symbol
+            std::cout << " ";
+        }
+
+        for (int i = 0; i < num_of_symbols; ++i){ //symbols after the spaces
+            if ( (i==0) || (i == (num_of_symbols-1) ) || (h==0) ){
+                std::cout << symbol;    
+            }else std::cout << " ";
+        }
+
+       std::cout << "\n";
+       spaces = (spaces == height) ? height : ++spaces;
+       num_of_symbols -= 2;
+    }
+
+
     /*
 
     ....*....
