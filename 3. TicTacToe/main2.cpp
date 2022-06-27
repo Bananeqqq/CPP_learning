@@ -152,7 +152,7 @@ void playW_bot(){
 	else std::cout << "\n\tIt's a tie!" << std::endl;
 }
 
-int bot_squareCheck(){ //stupid, but simple for smaller boards
+int bot_squareCheck(){ //stupid, but simple for smaller boards... prolly the first thing that came to my mind how to do it without minimax and alpha-beta pruning, could be better tho -> next i wanna try the minimax
 	if (steps >= 2){
 		if (square[1] == 'O' && square[2] == 'O' && square[3] == '3') return 3;
 		else if (square[4] == 'O' && square[5] == 'O' && square[6] == '6') return 6;
